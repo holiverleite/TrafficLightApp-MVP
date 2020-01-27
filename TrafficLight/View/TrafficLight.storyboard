@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2dq-KC-E8G">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MWy-AV-1yN">
+            <objects>
+                <navigationController id="2dq-KC-E8G" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VMQ-Fs-sFl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gxb-QC-xos" kind="relationship" relationship="rootViewController" id="TcW-OR-LSl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZm-Rv-sW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771" y="149"/>
+        </scene>
+        <!--Traffic Light View Controller-->
+        <scene sceneID="foO-lF-Bpe">
+            <objects>
+                <viewController id="Gxb-QC-xos" customClass="TrafficLightViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m6x-Lb-0MV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxE-bZ-uCI">
+                                <rect key="frame" x="68" y="168" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDt-J6-PHs">
+                                <rect key="frame" x="184" y="168" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtY-fj-JNO">
+                                <rect key="frame" x="300" y="168" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnT-SW-eh8">
+                                <rect key="frame" x="68" y="243" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KnT-SW-eh8" firstAttribute="leading" secondItem="ZxE-bZ-uCI" secondAttribute="leading" id="0U8-B4-eBP"/>
+                            <constraint firstItem="ZxE-bZ-uCI" firstAttribute="top" secondItem="dDt-J6-PHs" secondAttribute="top" id="2jk-1j-SdD"/>
+                            <constraint firstItem="KnT-SW-eh8" firstAttribute="centerX" secondItem="m6x-Lb-0MV" secondAttribute="centerX" id="8h8-JG-Jbp"/>
+                            <constraint firstItem="UtY-fj-JNO" firstAttribute="leading" secondItem="dDt-J6-PHs" secondAttribute="trailing" constant="70" id="ERv-0m-pUH"/>
+                            <constraint firstItem="dDt-J6-PHs" firstAttribute="leading" secondItem="ZxE-bZ-uCI" secondAttribute="trailing" constant="70" id="JYR-bF-qgn"/>
+                            <constraint firstItem="KnT-SW-eh8" firstAttribute="trailing" secondItem="UtY-fj-JNO" secondAttribute="trailing" id="Ope-Mr-pN7"/>
+                            <constraint firstItem="UtY-fj-JNO" firstAttribute="top" secondItem="dDt-J6-PHs" secondAttribute="top" id="gyO-fg-E1Y"/>
+                            <constraint firstItem="KnT-SW-eh8" firstAttribute="top" secondItem="dDt-J6-PHs" secondAttribute="bottom" constant="45" id="mcj-BI-TX8"/>
+                            <constraint firstItem="dDt-J6-PHs" firstAttribute="centerX" secondItem="m6x-Lb-0MV" secondAttribute="centerX" id="nGw-JT-NXn"/>
+                            <constraint firstItem="dDt-J6-PHs" firstAttribute="top" secondItem="RAU-2Y-v80" secondAttribute="top" constant="80" id="uGb-MW-63h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RAU-2Y-v80"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V2s-6c-K3L"/>
+                    <connections>
+                        <outlet property="greenButton" destination="ZxE-bZ-uCI" id="9NB-kO-ZVi"/>
+                        <outlet property="outputLabel" destination="KnT-SW-eh8" id="ocy-5H-a0A"/>
+                        <outlet property="redButton" destination="UtY-fj-JNO" id="yzs-Mn-BnV"/>
+                        <outlet property="yellowButton" destination="dDt-J6-PHs" id="fAD-sq-8Hb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TK-Am-Bg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="149"/>
+        </scene>
+    </scenes>
+</document>
